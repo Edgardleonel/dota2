@@ -50,7 +50,6 @@ export class ModalComponent implements OnInit {
 
   submitForm() {
     const data = this.form.value;
-    console.log('form login', data);
     this.auth.login(data)
     .then((res) => {
       this.getAndSaveCurrentUser(res.user.email);
@@ -77,7 +76,6 @@ export class ModalComponent implements OnInit {
 
   register() {
     const data = this.form.value;
-    console.log('form login', data);
     this.auth.register(data)
     .then((res) => {
       this.firebase.createUser({name: this.form.value.name, email: this.form.value.email, phone: this.form.value.phone});

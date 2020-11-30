@@ -23,8 +23,10 @@ public accountName;
 
   logout() {
     this.auth.logout();
-    localStorage.removeItem('user');
-    setTimeout(() => this.router.navigateByUrl('/'), 1000);
+    setTimeout(() => {
+      this.router.navigateByUrl('/');
+      localStorage.removeItem('user');
+    }, 1500);
   }
 
 
