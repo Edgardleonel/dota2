@@ -1,0 +1,51 @@
+<div *ngIf="!team">
+  <app-loading></app-loading>
+</div>
+<app-header-dashboard></app-header-dashboard>
+<div class="container">
+  <div class="detail" *ngIf="team">
+    <img src="{{team.logo_url}}" alt="" />
+    <div class="content">
+      <span class="content-name">{{team.name}}</span>
+      <div class="content-detail">
+        <div>
+          <span>Vitórias</span>
+          <span>
+            <div class="textSuccess">{{team.wins}}</div>
+          </span>
+        </div>
+        <div>
+          <span>Derrotas</span>
+          <span>
+            <div class="textDanger">{{team.losses}}</div>
+          </span>
+        </div>
+        <div>
+          <span>Avaliação</span>
+          <span>
+            <div>{{team.rating}}</div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <mat-tab-group (selectedTabChange)="tabEvent($event)">
+    <mat-tab label="Jogadores Atuais">
+      <app-table [dataTables]="dataTablesPlayer"></app-table>
+      <app-graphic [chart]="chart"></app-graphic>
+      <div *ngIf="!dataTablesPlayer">
+        <h3>Não há jogadores ativos no momento!</h3>
+      </div>
+    </mat-tab>
+    <mat-tab label="Os 10 Heróis Mais Jogados">
+      <app-table [dataTables]="dataTablesHeroes"></app-table>
+      <app-graphic [chart]="chart"></app-graphic>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+
+

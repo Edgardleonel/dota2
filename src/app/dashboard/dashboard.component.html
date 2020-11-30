@@ -1,0 +1,6 @@
+<div *ngIf="!dataTables">
+  <app-loading></app-loading>
+</div>
+<app-header-dashboard></app-header-dashboard>
+<app-graphic [chart]="chart"></app-graphic>
+<app-table [dataTables]="dataTables"></app-table>

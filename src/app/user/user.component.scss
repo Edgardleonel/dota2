@@ -1,0 +1,53 @@
+::ng-deep .mat-dialog-container {
+  color: #FFF;
+  background-color: rgb(60, 65, 103);
+  text-align: center;
+}
+
+::ng-deep .mat-tab-label{
+  color:#FFF;
+  text-transform: uppercase;
+}
+
+::ng-deep .mat-tab-list {
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+}
+
+::ng-deep .mat-form-field {
+  width: 100%;
+  display: contents !important;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #FFF;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color:#FFF;
+}
+
+.btn-save {
+  background-color:rgba(75, 192, 192, 0.2);
+  color: #FFF;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 500;
+  font-size: larger;
+  height: 4rem; 
+  margin: 1.5rem 0 !important;
+  width: 15rem;
+  &:hover {
+    opacity: .8;
+  }
+}  
+
+
+
+button:focus {
+  outline: none !important;
+}

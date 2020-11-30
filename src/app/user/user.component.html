@@ -1,0 +1,40 @@
+<app-header-dashboard></app-header-dashboard>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="saveAccount()">
+    <br />
+    <mat-form-field>
+      <mat-label>Seu Nome</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="name"
+        [(ngModel)]="account.name"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Seu Endereço</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="address"
+        [(ngModel)]="account.address"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Seu Telefone</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="phone"
+        [(ngModel)]="account.phone"
+      />
+    </mat-form-field>
+    <br />
+      <button class="btn-save"
+      type="submit"
+     >Atualizar</button>
+  </form>
+</div>
+

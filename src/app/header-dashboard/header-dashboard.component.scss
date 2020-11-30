@@ -1,0 +1,50 @@
+.section-block {
+  background-color: rgba(0, 0, 0, 0.37);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.section-inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.item-block {
+  display: block;
+  height: 100%;
+  width: 100%;
+  width: 9.4375rem;
+}
+
+.url-link {
+  &.logo {
+    font-size: 22px;
+  }
+}
+
+.widget {
+  &.element-2, &.element-3 {
+    flex: auto;
+  }
+  &.element-2 {
+    justify-content: flex-start;
+  }
+  &.element-3 {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    .exit {
+      padding-left: 5rem;
+    }
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+

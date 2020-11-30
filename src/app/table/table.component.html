@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="overflow">
+    <table class="table" *ngIf="dataTables">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Avaliação</th>
+          <th scope="col">Vitórias</th>
+          <th scope="col">Derrotas</th>
+          <th scope="col">Jogos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of dataTables"   (click)="openDetail(data.team_id)">
+          <td>
+            <span *ngIf="data.logo_url">
+              <img src="{{data.logo_url}}" />
+            </span>
+            <span *ngIf="data.name">{{data.name}}</span>
+            <span *ngIf="data.localized_name">{{data.localized_name}}</span>
+          </td>
+          <td>{{data.rating}}</td>
+          <td>{{data.wins}}</td>
+          <td>{{data.losses}}</td>
+          <td>{{data.games_played}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

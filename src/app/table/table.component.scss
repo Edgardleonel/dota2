@@ -1,0 +1,45 @@
+table {
+    width: 100%;
+    margin: 2rem 0;
+    color: rgba(255, 255, 255, 0.6);
+    thead tr {
+      background: linear-gradient(90deg, rgba(20, 255, 212, 0.09) 2%, rgba(46, 160, 214, 0.26) 27%, rgba(5, 181, 249, 0.04) 80%);
+    }
+    tbody tr {
+      cursor: pointer;
+      background-color: transparent !important;
+      &:hover {
+        color: #FFF;
+      }
+    }
+    tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      border-left: 1px solid rgba(255, 255, 255, 0.05) !important;
+      border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    td span img {
+      margin: 7px 7px 7px 0px;
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    td, th {
+      border-top: none;
+      padding: 1.25rem;
+      vertical-align: baseline;
+      &:not(:first-of-type) {
+        text-align: center;
+      }
+    }
+    thead th {
+      border-bottom: none;
+    }
+}
+
+.overflow {
+  overflow: auto;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}

@@ -1,0 +1,85 @@
+video {
+  min-width: 100%;
+  z-index: 1;
+}
+
+.headline {
+    position: absolute;
+    top: 20rem;
+    left: 10rem;
+    color: #FFF;
+}
+
+.btn {
+    color: #336391;
+    border: 1px solid #336391;
+    font-size: 1.1146rem;
+    font-weight: 500;
+    width: 19.25rem;
+    border-radius: 0;
+    &:hover {
+        background: #336391;
+        color: #FFF;
+        border: 1px solid #336391;
+    }
+}
+.Container {
+    background-size: cover;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -1rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+#Container {
+    background-image: url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/blog/play/bg_04.jpg);
+    .Inner {
+        float: right;
+        padding: 10rem 2.5rem;
+        color: #FFF;
+    }
+}
+
+#Container_02 {
+    background-image: url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/blog/play/bg_08.jpg);
+    height: 972px;
+    background-color: #000000;
+    .Inner_02 {
+        text-align: center;
+        padding: 10rem;
+        color: #FFF;
+    }
+}
+
+@media (max-width: 768px) {
+    video {
+        width: 100%;
+        min-height: auto;
+    }
+    .headline {
+        top: 8rem;
+        left: 2rem;
+    }
+    .contents {
+        .btn {
+            font-size: .75rem;
+            width: 16.25rem;
+        }
+    }
+    #Container {
+        .Inner {
+            padding: 2.5rem;
+        }
+    }
+
+    #Container_02 {
+    height: 436px;
+        .Inner_02 {
+            padding: 2.5rem;
+        }
+    }
+}
